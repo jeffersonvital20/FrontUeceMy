@@ -72,8 +72,8 @@ export const Menu: React.FC<IMenulateralProps> = ({ children }) => {
           </Box>
           <Box component="nav" display={"flex"} flexDirection={"row"} gap={1}>
              
-                {drawerOptions.map( drawerOptions => (
-                    <List>
+                {drawerOptions.map(drawerOptions => (
+                    <List key={drawerOptions.to}>
                         <ListItemLink
                         key={drawerOptions.to}
                         icon={drawerOptions.icon}
