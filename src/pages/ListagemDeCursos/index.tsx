@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import cursosData from '../../cursos.json';
-import { CustomInput, Detail, InfoDetails, InputContainer, ItemButtons, ItemContainer, ItemData, ItemImg, MainDetail } from './styles';
+import { Container, CustomInput, Detail, InfoDetails, InputContainer, ItemButtons, ItemContainer, ItemData, ItemImg, MainDetail } from './styles';
 import Button from '../../shared/Components/Button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
@@ -18,6 +18,10 @@ const CursoCard: React.FC<CursoCardProps> = ({ curso }) => {
     navigate(`/cursos/detalhe/${curso.id}`); // Redireciona para a página de detalhes do curso
   };
 
+  const handleComprar = () => {
+    navigate(`/cursos/comprar/${curso.id}`); // Redireciona para a compra do curso
+  };
+
   return (
     <ItemContainer>
       <ItemData>
@@ -30,7 +34,7 @@ const CursoCard: React.FC<CursoCardProps> = ({ curso }) => {
         </InfoDetails>
       </ItemData>
       <ItemButtons>
-        <Button primary={true}>Comprar</Button>
+        <Button primary={true} onClick={handleComprar}>Comprar</Button>
         <Button onClick={handleDetalheClick}>Detalhes</Button>
       </ItemButtons>
     </ItemContainer>
@@ -54,7 +58,7 @@ const ListagemDeCursos: React.FC = () => {
   );
 
   return (
-    <div>
+    <Container>
       <h1>Buscar Cursos</h1>
       <InputContainer>
         <FontAwesomeIcon icon={faSearch} />
@@ -69,7 +73,7 @@ const ListagemDeCursos: React.FC = () => {
       {cursosFiltrados.map((curso: Curso) => (
         <CursoCard key={curso.id} curso={curso} />
       ))}
-    </div>
+    </Container>
   );
 };
 

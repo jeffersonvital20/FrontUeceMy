@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { Curso } from '../../types/Curso';
 import cursosData from '../../cursos.json';
 import { AulaData, CompraContainer, CursoContainer, Detail, Details, DetailsContainer, ItemAula, ItemImg, ListaAulas, ListaAulasContainer, ListaAulasTitle, MainDetail, Valor } from './styles';
@@ -7,6 +7,7 @@ import Button from '../../shared/Components/Button';
 
 const DetalheDeCursos: React.FC = () => {
   const { id } = useParams<{ id: string }>();
+  const navigate = useNavigate();
 
   const [curso, setCurso] = useState<Curso>();
 
@@ -29,6 +30,10 @@ const DetalheDeCursos: React.FC = () => {
     }
   };
 
+  const handleComprar = () => {
+    navigate(`/cursos/comprar/${id}`);
+  };
+
   return (
     <div>
       {curso && (
@@ -43,7 +48,7 @@ const DetalheDeCursos: React.FC = () => {
               <ItemImg />
               <CompraContainer>
                 <Valor>R$ {curso.valor}</Valor>
-                <Button primary={true}>Comprar</Button>
+                <Button primary={true} onClick={handleComprar}>Comprar</Button>
               </CompraContainer>
             </Details>
           </DetailsContainer>

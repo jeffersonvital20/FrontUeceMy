@@ -4,6 +4,7 @@ import { useDrawerContext } from '../shared/contexts';
 import { useEffect } from 'react';
 import DetalheDeCursos from '../pages/DetalheDeCursos';
 import ListagemDeCursos from '../pages/ListagemDeCursos';
+import ComprarCurso from '../pages/CompraCurso';
 
 export const AppRoutes = () => {
   const { setDrawerOptions } = useDrawerContext();
@@ -33,7 +34,7 @@ export const AppRoutes = () => {
       {/*<Route path="/pagina-inicial" element={<Dashboard />} />*/}
       <Route path="/cursos" element={<ListagemDeCursos />} />
       <Route path="/cursos/detalhe/:id" element={<DetalheDeCursos />} />
-
+      <Route path="/cursos/comprar/:id" element={<ComprarCurso />} />
       <Route path="*" element={<Navigate to="/pagina-inicial" />} />
     </Routes>
   );

@@ -1,5 +1,9 @@
 import styled from 'styled-components';
 
+export const Container = styled.div`
+  width: 95%;
+`;
+
 export const ItemContainer = styled.div`
   display: flex;
   flex-direction: row;
