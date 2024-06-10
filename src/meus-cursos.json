@@ -1,0 +1,43 @@
+{
+  "cursos": [
+    {
+      "id": 1,
+      "nome": "Spring Boot do zero ao profissional",
+      "nomeProfessor": "Beltrano Souza",
+      "duracao": 20,
+      "descricao": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac libero euismod, varius justo.",
+      "valor": "29.90",
+      "programa": [
+        {"aula": 1, "titulo": "Conhecendo o Spring Boot", "duracao": 100},
+        {"aula": 2, "titulo": "Anotações e palavras-chave", "duracao": 25},
+        {"aula": 3, "titulo": "CRUD", "duracao": 30}
+      ]
+    },
+    {
+      "id": 2,
+      "nome": "Criando microsserviços com Node.js",
+      "nomeProfessor": "Ryan Dahl",
+      "duracao": 10,
+      "descricao": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac libero euismod, varius justo.",
+      "valor": "34.90",
+      "programa": [
+        {"aula": 1, "titulo": "Conhecendo o Node.js", "duracao": 120},
+        {"aula": 2, "titulo": "Estruturas de controle", "duracao": 200},
+        {"aula": 3, "titulo": "Subindo um servidor", "duracao": 35}
+      ]
+    },
+    {
+      "id": 3,
+      "nome": "Python para data science",
+      "nomeProfessor": "Guido van Rossum",
+      "duracao": 20,
+      "descricao": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac libero euismod, varius justo.",
+      "valor": "139.90",
+      "programa": [
+        {"aula": 1, "titulo": "Conhecendo o Python", "duracao": 10},
+        {"aula": 2, "titulo": "Laços de Repetição", "duracao": 250},
+        {"aula": 3, "titulo": "Construindo o sistema de um satélite", "duracao": 320}
+      ]
+    }
+  ]
+}
