@@ -6,6 +6,7 @@ import DetalheDeCursos from '../pages/DetalheDeCursos';
 import ListagemDeCursos from '../pages/ListagemDeCursos';
 import ComprarCurso from '../pages/CompraCurso';
 import MeusCursos from '../pages/MeusCursos';
+import Dashboard from '../pages/Dashboard';
 
 export const AppRoutes = () => {
   const { setDrawerOptions } = useDrawerContext();
@@ -32,7 +33,7 @@ export const AppRoutes = () => {
 
   return (
     <Routes>
-      {/*<Route path="/pagina-inicial" element={<Dashboard />} />*/}
+      <Route path="/pagina-inicial" element={<Dashboard />} />
       <Route path="/cursos" element={<ListagemDeCursos />} />
       <Route path="/cursos/detalhe/:id" element={<DetalheDeCursos />} />
       <Route path="/cursos/comprar/:id" element={<ComprarCurso />} />
