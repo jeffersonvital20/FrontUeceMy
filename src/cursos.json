@@ -8,9 +8,9 @@
       "descricao": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac libero euismod, varius justo.",
       "valor": "29.90",
       "programa": [
-        {"aula": 1, "titulo": "Conhecendo o Spring Boot", "duracao": 1},
-        {"aula": 2, "titulo": "Anotações e palavras-chave", "duracao": 2},
-        {"aula": 3, "titulo": "CRUD", "duracao": 3}
+        {"aula": 1, "titulo": "Conhecendo o Spring Boot", "duracao": 100},
+        {"aula": 2, "titulo": "Anotações e palavras-chave", "duracao": 25},
+        {"aula": 3, "titulo": "CRUD", "duracao": 30}
       ]
     },
     {
@@ -21,9 +21,9 @@
       "descricao": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac libero euismod, varius justo.",
       "valor": "34.90",
       "programa": [
-        {"aula": 1, "titulo": "Conhecendo o Node.js", "duracao": 1},
-        {"aula": 2, "titulo": "Estruturas de controle", "duracao": 2},
-        {"aula": 3, "titulo": "Subindo um servidor", "duracao": 3}
+        {"aula": 1, "titulo": "Conhecendo o Node.js", "duracao": 120},
+        {"aula": 2, "titulo": "Estruturas de controle", "duracao": 200},
+        {"aula": 3, "titulo": "Subindo um servidor", "duracao": 35}
       ]
     },
     {
@@ -34,9 +34,9 @@
       "descricao": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac libero euismod, varius justo.",
       "valor": "139.90",
       "programa": [
-        {"aula": 1, "titulo": "Conhecendo o Python", "duracao": 1},
-        {"aula": 2, "titulo": "Laços de Repetição", "duracao": 2},
-        {"aula": 3, "titulo": "Construindo o sistema de um satélite", "duracao": 3}
+        {"aula": 1, "titulo": "Conhecendo o Python", "duracao": 10},
+        {"aula": 2, "titulo": "Laços de Repetição", "duracao": 250},
+        {"aula": 3, "titulo": "Construindo o sistema de um satélite", "duracao": 320}
       ]
     },
     {
@@ -47,9 +47,9 @@
       "descricao": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac libero euismod, varius justo.",
       "valor": "49.90",
       "programa": [
-        {"aula": 1, "titulo": "Conhecendo o Java", "duracao": 1},
-        {"aula": 2, "titulo": "Entendendo orientação a objetos", "duracao": 2},
-        {"aula": 3, "titulo": "Aplicação para dominar o mundo", "duracao": 3}
+        {"aula": 1, "titulo": "Conhecendo o Java", "duracao": 190},
+        {"aula": 2, "titulo": "Entendendo orientação a objetos", "duracao": 200},
+        {"aula": 3, "titulo": "Aplicação para dominar o mundo", "duracao": 300}
       ]
     },
     {
@@ -60,9 +60,9 @@
       "descricao": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac libero euismod, varius justo.",
       "valor": "100.00",
       "programa": [
-        {"aula": 1, "titulo": "Conhecendo o C++", "duracao": 1},
-        {"aula": 2, "titulo": "Palavras reservadas", "duracao": 2},
-        {"aula": 3, "titulo": "Fazendo meu primeiro sistema para um avião", "duracao": 3}
+        {"aula": 1, "titulo": "Conhecendo o C++", "duracao": 10},
+        {"aula": 2, "titulo": "Palavras reservadas", "duracao": 20},
+        {"aula": 3, "titulo": "Fazendo meu primeiro sistema para um avião", "duracao": 30}
       ]
     }
   ]

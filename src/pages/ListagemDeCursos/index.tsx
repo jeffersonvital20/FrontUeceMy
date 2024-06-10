@@ -1,19 +1,11 @@
-import React, { useState } from 'react';
-import cursosData from '../cursos.json';
+import React, { useEffect, useState } from 'react';
+import cursosData from '../../cursos.json';
 import { CustomInput, Detail, InfoDetails, InputContainer, ItemButtons, ItemContainer, ItemData, ItemImg, MainDetail } from './styles';
 import Button from '../../shared/Components/Button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { useNavigate } from 'react-router-dom';
-
-interface Curso {
-  id: number;
-  nome: string;
-  nomeProfessor: string;
-  duracao: number;
-  descricao: string;
-  valor: string;
-}
+import { Curso } from '../../types/Curso';
 
 interface CursoCardProps {
   curso: Curso;
@@ -32,7 +24,7 @@ const CursoCard: React.FC<CursoCardProps> = ({ curso }) => {
         <ItemImg />
         <InfoDetails>
           <MainDetail>{curso.nome}</MainDetail>
-          <Detail>{curso.nomeProfessor} | {curso.duracao} aulas</Detail>
+          <Detail>{curso.nomeProfessor} | {curso.duracao} {curso.duracao === 1 ? 'aula' : 'aulas'}</Detail>
           <Detail>{curso.descricao}</Detail>
           <MainDetail>R$ {curso.valor}</MainDetail>
         </InfoDetails>
@@ -46,13 +38,18 @@ const CursoCard: React.FC<CursoCardProps> = ({ curso }) => {
 };
 
 const ListagemDeCursos: React.FC = () => {
-  const [termoDeBusca, setTermoDeBusca] = useState('');
+  const [termoDeBusca, setTermoDeBusca] = useState<string>('');
+  const [cursos, setCursos] = useState<Curso[]>([]);
+
+  useEffect(() => {
+    setCursos(cursosData.cursos);
+  }, []);
 
   const handleTermoDeBuscaChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setTermoDeBusca(event.target.value);
   };
 
-  const cursosFiltrados = cursosData.cursos.filter((curso) =>
+  const cursosFiltrados = cursos.filter((curso: Curso) =>
     curso.nome.toLowerCase().includes(termoDeBusca.toLowerCase())
   );
 

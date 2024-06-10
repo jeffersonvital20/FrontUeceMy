@@ -48,6 +48,7 @@ export const Detail = styled.p`
   padding: 0;
   font-family: serif;
   font-size: 15px;
+  text-align: justify;
 `;
 
 export const InputContainer = styled.div`
